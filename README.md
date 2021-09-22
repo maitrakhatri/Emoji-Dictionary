@@ -1,2 +1,2 @@
-# emoji-dictionary
+# Emoji-Dictionary
 Created with CodeSandbox
