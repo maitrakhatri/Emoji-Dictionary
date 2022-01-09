@@ -1,7 +1,10 @@
+//replaced all var with let and const
+//used arrow function for all functions
+
 import React, { useState } from "react";
 import "./styles.css";
 
-var emojiDic = {
+const emojiDic = {
   "🥢": "Chopsticks",
   "🍽": "Fork and Knife with Plate",
   "🍴": "Fork and Knife",
@@ -15,27 +18,27 @@ var emojiDic = {
   "🍸": "Cocktail Glass"
 };
 
-var emojisWeKnow = Object.keys(emojiDic);
+const emojisWeKnow = Object.keys(emojiDic);
 
 export default function App() {
-  var [meaning, setMeaning] = useState("");
+  let [meaning, setMeaning] = useState("");
 
-  function emojiMeaning(event) {
-    var userInput = event.target.value;
+  const emojiMeaning = (event) => {
+    const userInput = event.target.value;
 
-    var meaning = emojiDic[userInput];
+    let meaning = emojiDic[userInput];
 
     if (meaning === undefined) {
       meaning = "We don't have this in our DataBase yet.";
     }
 
     setMeaning(meaning);
-  }
+  };
 
-  function onClickHandler(emoji) {
-    var meaning = emojiDic[emoji];
+  const onClickHandler = (emoji) => {
+    const meaning = emojiDic[emoji];
     setMeaning(meaning);
-  }
+  };
 
   return (
     <div className="App">
